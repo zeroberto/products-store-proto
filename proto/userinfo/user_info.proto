@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = "pb";
+
+package userinfo;
+
+// UserInfoService represents the proto service responsible for requesting 
+// information from users
+service UserInfoService {
+
+  // GetUserInfo is responsible for obtaining the information for a particular user
+  rpc GetUserInfo(UserInfoRequest) returns (stream UserInfoResponse) {}
+}
+
+// UserInfoRequest define the request message to obtain information from users
+message UserInfoRequest {
+  int64 id = 1;
+}
+
+// UserInfoResponse defines the response message for the user information request
+message UserInfoResponse {
+  int64 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  int64 date_of_birth = 4;
+  int64 created_at = 5;
+  int64 updated_at = 6;
+  int64 deactivated_at = 7;
+}
