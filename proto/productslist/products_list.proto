@@ -2,11 +2,11 @@ syntax = "proto3";
 
 option go_package = "pb";
 option java_multiple_files = true;
-option java_package = "com.github.zeroberto.productsstore";
+option java_package = "com.github.zeroberto.productsstore.productslist";
 
 package productslist;
 
-// ProductsList represents the proto of service responsible for the exhibition of products
+// ProductsList represents the proto service responsible for the exhibition of products
 // and their information
 service ProductsListService {
 
@@ -18,22 +18,16 @@ service ProductsListService {
   rpc ListProductsByUser(ProductsListRequest) returns (stream ProductsListResponse) {}
 }
 
-// ProductRequest represents the requisition proto for product reading interactions
+// ProductRequest represents the request message for product reading interactions
 message ProductsListRequest {
   int64 user_id = 1;
 }
 
-// ProductResponse represents the response proto for product reading requests
+// ProductResponse represents the response message for product reading requests
 message ProductsListResponse {
   string id = 1;
   int32 price_in_cents = 2;
   string tilte = 3;
   string description = 4;
   Discount discount = 5;
-}
-
-// Discount represents the discount applied for a given product
-message Discount {
-  float pct = 1;
-  float value_in_cents = 2;
 }
