@@ -30,4 +30,8 @@ message ProductsListResponse {
   string tilte = 3;
   string description = 4;
   Discount discount = 5;
+  message Discount {
+    float pct = 3;
+    float value_in_cents = 4;
+  };
 }
