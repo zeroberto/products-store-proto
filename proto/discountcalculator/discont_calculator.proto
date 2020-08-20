@@ -12,7 +12,7 @@ service DiscountCalculatorService {
 
   // CalculateDiscount is responsible for calculating the discount for a product based 
   // on an informed user
-  rpc CalculateDiscount(DiscountRequest) returns (stream DiscountResponse) {}
+  rpc CalculateDiscount(DiscountRequest) returns (DiscountResponse) {}
 }
 
 // DiscountRequest represents the request message to get the discount for a given product
@@ -26,5 +26,5 @@ message DiscountResponse {
   string product_id = 1;
   int64 user_id = 2;
   float pct = 3;
-  float value_in_cents = 4;
+  int32 value_in_cents = 4;
 }
