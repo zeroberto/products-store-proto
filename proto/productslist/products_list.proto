@@ -10,12 +10,9 @@ package productslist;
 // and their information
 service ProductsListService {
 
-  // ListProducts is responsible for returning a list with basic information for all products
+  // ListProducts is responsible for returning a list of all products with discounts
+  // applied for a given user, if an identifier is passed
   rpc ListProducts(ProductsListRequest) returns (stream ProductsListResponse) {}
-
-  // ListProductsByUser is responsible for returning a list of all products with discounts
-  // applied for a given user
-  rpc ListProductsByUser(ProductsListRequest) returns (stream ProductsListResponse) {}
 }
 
 // ProductRequest represents the request message for product reading interactions
@@ -30,6 +27,7 @@ message ProductsListResponse {
   string tilte = 3;
   string description = 4;
   Discount discount = 5;
+
   message Discount {
     float pct = 3;
     float value_in_cents = 4;
