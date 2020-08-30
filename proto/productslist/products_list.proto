@@ -29,7 +29,7 @@ message ProductsListResponse {
   Discount discount = 5;
 
   message Discount {
-    float pct = 3;
-    float value_in_cents = 4;
+    float pct = 1;
+    float value_in_cents = 2;
   };
 }
