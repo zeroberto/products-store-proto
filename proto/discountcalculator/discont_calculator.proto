@@ -6,9 +6,9 @@ option java_package = "com.github.zeroberto.productsstore.discountcalculator";
 
 package discountcalculator;
 
-// DiscountCalculatorService represents the proto service responsible for requesting 
+// DiscountCalculator represents the proto service responsible for requesting 
 // the calculation of a product discount
-service DiscountCalculatorService {
+service DiscountCalculator {
 
   // CalculateDiscount is responsible for calculating the discount for a product based 
   // on an informed user

@@ -6,9 +6,9 @@ option java_package = "com.github.zeroberto.productsstore.userinfo";
 
 package userinfo;
 
-// UserInfoService represents the proto service responsible for requesting 
+// UserInfo represents the proto service responsible for requesting 
 // information from users
-service UserInfoService {
+service UserInfo {
 
   // GetUserInfo is responsible for obtaining the information for a particular user
   rpc GetUserInfo(UserInfoRequest) returns (UserInfoResponse) {}

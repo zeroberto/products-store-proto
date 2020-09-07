@@ -8,7 +8,7 @@ package productslist;
 
 // ProductsList represents the proto service responsible for the exhibition of products
 // and their information
-service ProductsListService {
+service ProductsList {
 
   // ListProducts is responsible for returning a list of all products with discounts
   // applied for a given user, if an identifier is passed
