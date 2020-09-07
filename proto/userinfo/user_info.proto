@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-option go_package = "pb";
+option go_package = "github.com/zeroberto/products-store/userinfo";
+option java_multiple_files = true;
+option java_package = "com.github.zeroberto.productsstore.userinfo";
 
 package userinfo;
 
@@ -9,7 +11,7 @@ package userinfo;
 service UserInfoService {
 
   // GetUserInfo is responsible for obtaining the information for a particular user
-  rpc GetUserInfo(UserInfoRequest) returns (stream UserInfoResponse) {}
+  rpc GetUserInfo(UserInfoRequest) returns (UserInfoResponse) {}
 }
 
 // UserInfoRequest define the request message to obtain information from users
