@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "pb";
+option go_package = "github.com/zeroberto/products-store/discountcalculator";
 option java_multiple_files = true;
 option java_package = "com.github.zeroberto.productsstore.discountcalculator";
 
@@ -19,7 +19,7 @@ service DiscountCalculator {
 message DiscountRequest {
   string product_id = 1;
   int64 user_id = 2;
-}  
+}
 
 // DiscountResponse represents the response message for discount applied for a given product
 message DiscountResponse {
